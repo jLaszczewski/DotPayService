@@ -1,0 +1,401 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		05F5443D2272DE4D00E4C940 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F5443C2272DE4D00E4C940 /* AppDelegate.swift */; };
+		05F5443F2272DE4D00E4C940 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F5443E2272DE4D00E4C940 /* ViewController.swift */; };
+		05F544422272DE4D00E4C940 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05F544402272DE4D00E4C940 /* Main.storyboard */; };
+		05F544442272DE4F00E4C940 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05F544432272DE4F00E4C940 /* Assets.xcassets */; };
+		05F544472272DE4F00E4C940 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05F544452272DE4F00E4C940 /* LaunchScreen.storyboard */; };
+		05F544542272DF3900E4C940 /* DotPayBeginPaymentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F544502272DF3900E4C940 /* DotPayBeginPaymentModel.swift */; };
+		05F544552272DF3900E4C940 /* DotPayService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F544512272DF3900E4C940 /* DotPayService.swift */; };
+		05F544562272DF3900E4C940 /* String+SHA256.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F544532272DF3900E4C940 /* String+SHA256.swift */; };
+		05F544582272DF9200E4C940 /* PaymentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F544572272DF9200E4C940 /* PaymentService.swift */; };
+		05F5445C2272DFE900E4C940 /* CreateOrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F5445B2272DFE900E4C940 /* CreateOrderModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		05F544392272DE4D00E4C940 /* DotPayService.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DotPayService.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		05F5443C2272DE4D00E4C940 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		05F5443E2272DE4D00E4C940 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		05F544412272DE4D00E4C940 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		05F544432272DE4F00E4C940 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		05F544462272DE4F00E4C940 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		05F544482272DE4F00E4C940 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05F544502272DF3900E4C940 /* DotPayBeginPaymentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DotPayBeginPaymentModel.swift; sourceTree = "<group>"; };
+		05F544512272DF3900E4C940 /* DotPayService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DotPayService.swift; sourceTree = "<group>"; };
+		05F544532272DF3900E4C940 /* String+SHA256.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+SHA256.swift"; sourceTree = "<group>"; };
+		05F544572272DF9200E4C940 /* PaymentService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentService.swift; sourceTree = "<group>"; };
+		05F5445B2272DFE900E4C940 /* CreateOrderModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateOrderModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		05F544362272DE4D00E4C940 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		05F544302272DE4D00E4C940 = {
+			isa = PBXGroup;
+			children = (
+				05F5443B2272DE4D00E4C940 /* DotPayService */,
+				05F5443A2272DE4D00E4C940 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		05F5443A2272DE4D00E4C940 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				05F544392272DE4D00E4C940 /* DotPayService.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		05F5443B2272DE4D00E4C940 /* DotPayService */ = {
+			isa = PBXGroup;
+			children = (
+				05F544592272DFD300E4C940 /* Services */,
+				05F5443C2272DE4D00E4C940 /* AppDelegate.swift */,
+				05F5443E2272DE4D00E4C940 /* ViewController.swift */,
+				05F544402272DE4D00E4C940 /* Main.storyboard */,
+				05F544432272DE4F00E4C940 /* Assets.xcassets */,
+				05F544452272DE4F00E4C940 /* LaunchScreen.storyboard */,
+				05F544482272DE4F00E4C940 /* Info.plist */,
+			);
+			path = DotPayService;
+			sourceTree = "<group>";
+		};
+		05F5444E2272DF3900E4C940 /* DotPayService */ = {
+			isa = PBXGroup;
+			children = (
+				05F5444F2272DF3900E4C940 /* Models */,
+				05F544512272DF3900E4C940 /* DotPayService.swift */,
+				05F544522272DF3900E4C940 /* Helpers */,
+			);
+			path = DotPayService;
+			sourceTree = "<group>";
+		};
+		05F5444F2272DF3900E4C940 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				05F544502272DF3900E4C940 /* DotPayBeginPaymentModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		05F544522272DF3900E4C940 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				05F544532272DF3900E4C940 /* String+SHA256.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		05F544592272DFD300E4C940 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				05F544572272DF9200E4C940 /* PaymentService.swift */,
+				05F5445A2272DFDB00E4C940 /* Models */,
+				05F5444E2272DF3900E4C940 /* DotPayService */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		05F5445A2272DFDB00E4C940 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				05F5445B2272DFE900E4C940 /* CreateOrderModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		05F544382272DE4D00E4C940 /* DotPayService */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05F5444B2272DE4F00E4C940 /* Build configuration list for PBXNativeTarget "DotPayService" */;
+			buildPhases = (
+				05F544352272DE4D00E4C940 /* Sources */,
+				05F544362272DE4D00E4C940 /* Frameworks */,
+				05F544372272DE4D00E4C940 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DotPayService;
+			productName = DotPayService;
+			productReference = 05F544392272DE4D00E4C940 /* DotPayService.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		05F544312272DE4D00E4C940 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "let'S";
+				TargetAttributes = {
+					05F544382272DE4D00E4C940 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 05F544342272DE4D00E4C940 /* Build configuration list for PBXProject "DotPayService" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 05F544302272DE4D00E4C940;
+			productRefGroup = 05F5443A2272DE4D00E4C940 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				05F544382272DE4D00E4C940 /* DotPayService */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		05F544372272DE4D00E4C940 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05F544472272DE4F00E4C940 /* LaunchScreen.storyboard in Resources */,
+				05F544442272DE4F00E4C940 /* Assets.xcassets in Resources */,
+				05F544422272DE4D00E4C940 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		05F544352272DE4D00E4C940 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05F544552272DF3900E4C940 /* DotPayService.swift in Sources */,
+				05F5443F2272DE4D00E4C940 /* ViewController.swift in Sources */,
+				05F544542272DF3900E4C940 /* DotPayBeginPaymentModel.swift in Sources */,
+				05F544562272DF3900E4C940 /* String+SHA256.swift in Sources */,
+				05F544582272DF9200E4C940 /* PaymentService.swift in Sources */,
+				05F5445C2272DFE900E4C940 /* CreateOrderModel.swift in Sources */,
+				05F5443D2272DE4D00E4C940 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		05F544402272DE4D00E4C940 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				05F544412272DE4D00E4C940 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		05F544452272DE4F00E4C940 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				05F544462272DE4F00E4C940 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		05F544492272DE4F00E4C940 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		05F5444A2272DE4F00E4C940 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		05F5444C2272DE4F00E4C940 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J4V42SNZLF;
+				INFOPLIST_FILE = DotPayService/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.letS.DotPayService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		05F5444D2272DE4F00E4C940 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J4V42SNZLF;
+				INFOPLIST_FILE = DotPayService/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.letS.DotPayService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		05F544342272DE4D00E4C940 /* Build configuration list for PBXProject "DotPayService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05F544492272DE4F00E4C940 /* Debug */,
+				05F5444A2272DE4F00E4C940 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05F5444B2272DE4F00E4C940 /* Build configuration list for PBXNativeTarget "DotPayService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05F5444C2272DE4F00E4C940 /* Debug */,
+				05F5444D2272DE4F00E4C940 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 05F544312272DE4D00E4C940 /* Project object */;
+}
