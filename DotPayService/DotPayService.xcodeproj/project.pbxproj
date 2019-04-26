@@ -64,13 +64,13 @@
 		05F5443B2272DE4D00E4C940 /* DotPayService */ = {
 			isa = PBXGroup;
 			children = (
-				05F544592272DFD300E4C940 /* Services */,
+				05F544482272DE4F00E4C940 /* Info.plist */,
 				05F5443C2272DE4D00E4C940 /* AppDelegate.swift */,
 				05F5443E2272DE4D00E4C940 /* ViewController.swift */,
-				05F544402272DE4D00E4C940 /* Main.storyboard */,
 				05F544432272DE4F00E4C940 /* Assets.xcassets */,
 				05F544452272DE4F00E4C940 /* LaunchScreen.storyboard */,
-				05F544482272DE4F00E4C940 /* Info.plist */,
+				05F544402272DE4D00E4C940 /* Main.storyboard */,
+				05F544592272DFD300E4C940 /* Services */,
 			);
 			path = DotPayService;
 			sourceTree = "<group>";
@@ -78,9 +78,9 @@
 		05F5444E2272DF3900E4C940 /* DotPayService */ = {
 			isa = PBXGroup;
 			children = (
-				05F5444F2272DF3900E4C940 /* Models */,
 				05F544512272DF3900E4C940 /* DotPayService.swift */,
 				05F544522272DF3900E4C940 /* Helpers */,
+				05F5444F2272DF3900E4C940 /* Models */,
 			);
 			path = DotPayService;
 			sourceTree = "<group>";
@@ -105,8 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				05F544572272DF9200E4C940 /* PaymentService.swift */,
-				05F5445A2272DFDB00E4C940 /* Models */,
 				05F5444E2272DF3900E4C940 /* DotPayService */,
+				05F5445A2272DFDB00E4C940 /* Models */,
 			);
 			path = Services;
 			sourceTree = "<group>";

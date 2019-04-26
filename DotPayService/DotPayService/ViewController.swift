@@ -24,18 +24,13 @@ class ViewController: UIViewController {
 
     
     @IBAction func payButtonTapped(_ sender: Any) {
-        let createOrderModel = CreateOrderModel(description: "Za co to?", amount: 200.00)
+        
+        let description = "description" // Your Order Description
+        
+        let createOrderModel = CreateOrderModel(description: description, amount: 200.00)
         paymentService?.createOrder(createOrderModel: createOrderModel)
     }
 }
 
 // MARK: - DotPayServiceDelegate
-extension ViewController: DotPayServiceDelegate {
-    func didFinish() {
-        print("finish")
-    }
-    
-    func didFinishLoading() {
-        print("Loading finished")
-    }
-}
+extension ViewController: DotPayServiceDelegate {}

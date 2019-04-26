@@ -10,11 +10,17 @@ import UIKit
 import WebKit
 
 protocol DotPayServiceDelegate: UIViewController {
-    func didFinishLoading()
-    func didFinish()
+    func dotPayServiceDidFinishLoading()
+    func dotPayServiceDidFinish()
 }
 
-protocol DotPayServiceProtocol {
+extension DotPayServiceDelegate {
+    func dotPayServiceDidFinishLoading() {}
+    
+    func dotPayServiceDidFinish() {}
+}
+
+protocol DotPayServiceProtocol where Self: AnyObject {
     
     var delegate: DotPayServiceDelegate? { get set }
     var apiVersion: String { get set }
@@ -36,8 +42,8 @@ extension DotPayServiceProtocol {
     }
 }
 
-// MARK: - ViewController
-private final class DotPayViewController: UIViewController, WKNavigationDelegate {
+// MARK: - DotPayViewController
+private final class DotPayViewController: UIViewController {
     
     weak var delegate: DotPayServiceDelegate?
     weak var webView: WKWebView?
@@ -64,10 +70,6 @@ private final class DotPayViewController: UIViewController, WKNavigationDelegate
             webView.rightAnchor.constraint(equalTo: view.rightAnchor),
             webView.leftAnchor.constraint(equalTo: view.leftAnchor),
             bottomWebViewConstraint])
-    }
-    
-    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        delegate?.didFinishLoading()
     }
     
     init(delegate: DotPayServiceDelegate?, apiVersion: String, merchantId: Int, merchantPin: String, channel: Int, urlc: String) {
@@ -101,11 +103,12 @@ private final class DotPayViewController: UIViewController, WKNavigationDelegate
     }
 }
 
-// MARK: - ViewController Actions
+// MARK: - DotPayViewController Actions
 private extension DotPayViewController {
+    
     @objc func dismissAction() {
         dismiss(animated: true) { [weak self] in
-            self?.delegate?.didFinish()
+            self?.delegate?.dotPayServiceDidFinish()
         }
     }
     
@@ -116,11 +119,23 @@ private extension DotPayViewController {
         control: String?,
         ignoreLastPaymentValue: Bool
     ) {
+        
         guard let chk = "\(merchantPin)\(apiVersion)\(merchantId)\(amount)\(currency)\(description)\(control ?? "")\(channel)\(urlc)\(ignoreLastPaymentValue ? 1 : 0)".sha256() else { return }
         
-        guard let urlString = "https://ssl.dotpay.pl/test_payment/?api_version=\(apiVersion)&id=\(merchantId)&amount=\(amount)&currency=\(currency)&description=\(description)&\(control != nil ? "control=\(control!)" : "")&channel=\(channel)&urlc=\(urlc)&ignore_last_payment_channel=\(ignoreLastPaymentValue ? 1 : 0)&chk=\(chk)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
-            let url = URL(string: urlString)
-            else { return }
+        let paymentUrlString = "https://ssl.dotpay.pl/test_payment"
+        var paymentQueryString = "/?"
+        paymentQueryString.append("api_version=\(apiVersion)")
+        paymentQueryString.append("&id=\(merchantId)")
+        paymentQueryString.append("&amount=\(amount)")
+        paymentQueryString.append("&currency=\(currency)")
+        paymentQueryString.append("&description=\(description)")
+        if let control = control { paymentQueryString.append("&control=\(control)") }
+        paymentQueryString.append("&channel=\(channel)")
+        paymentQueryString.append("&urlc=\(urlc)")
+        paymentQueryString.append("&ignore_last_payment_channel=\(ignoreLastPaymentValue ? 1 : 0)")
+        paymentQueryString.append("&chk=\(chk)")
+        
+        guard let urlString = "\(paymentUrlString)\(paymentQueryString)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed), let url = URL(string: urlString) else { return }
         
         let urlRequest = URLRequest(url: url)
         webView?.load(urlRequest)
@@ -149,5 +164,12 @@ private extension DotPayViewController {
         UIView.animate(withDuration: 0.1, animations: { [weak self] () -> Void in
             self?.view.layoutIfNeeded()
         })
+    }
+}
+
+// MARK: - DotPayViewController WKNavigationDelegate
+extension DotPayViewController: WKNavigationDelegate {
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        delegate?.dotPayServiceDidFinishLoading()
     }
 }
